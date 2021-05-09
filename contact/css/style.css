@@ -1,0 +1,567 @@
+* {box-sizing: border-box;margin: 0;outline: 0}
+
+body {font-family: Arial, sans-serif;}
+.fixed-fix {height: 85px}
+/*
+============================================
+            start nav bar
+============================================
+*/
+nav {
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 20px #ededed;
+    background-color: white;
+    z-index: 2;
+}
+
+nav .logo {
+    font-size: 34px;
+    color: #705ECF;
+    font-family: arial;
+    text-shadow: 1px 1px 1px #555;
+    display: inline-block
+}
+
+nav .menu-label {
+    background-image: url('../images/iconfinder_Menu_green_1891031.png');
+    float: right;
+    background-size: cover;
+    padding: 20px;
+    display: none;
+}
+nav .media-div .search {float: right}
+
+nav .media-div .search .search-bar {
+    padding: 12px 10px;
+    border: 0;
+    background-color: #F7F7F7;
+    outline: 0;
+    letter-spacing: 2px;
+    color: #444;
+    float: left;
+    transition: all .3s linear;
+    width: 0px;
+}
+
+nav .media-div .search .fa-search {
+    padding: 12px 15px;
+    background-color: #27C3A2;
+    font-size: 16px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+    float: left;
+}
+
+.media-div .search .search-ch:checked ~ .search-bar {
+    width: 160px;
+    display: inline-block;
+}
+
+
+
+nav .media-div {
+    float: right;
+    display: flex;
+    justify-content: center;
+}
+
+nav .fa-search:hover {background-color: #6fc3b1;}
+
+nav .media-div a {
+    padding: 12px 15px;
+    font-size: 14px;
+    background-color: #705ECF;
+    border-radius: 10px;
+    transition: background-color .2s ease-in-out;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: arial;
+    flex-shrink: 0;
+}
+
+nav .media-div a:hover {background-color: #8d80d0}
+
+
+
+nav .main-ul {
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+nav .main-ul .active {color: #27C3A2}
+
+nav .main-ul li {
+    display: inline-block;
+    color: #000;
+    font-family: arial;
+    transition: color .2s ease-in-out;
+    font-size: 15px;
+    padding-right: 15px
+}
+
+nav .main-ul li:hover {color: #27C3A2}
+
+nav .main-ul .media-li {display: none}
+
+/* start of the drop down list*/
+
+nav .main-ul .drop-list {cursor: pointer}
+
+nav .main-ul .drop-list .sec-ul {
+    background: #111;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    padding: 20px;
+    width: 120px;
+    display: none;
+}
+
+nav .main-ul .drop-list .sec-ul li {color: white;}
+
+nav .main-ul .drop-list .sec-ul li:hover {color: #27C3A2}
+
+nav .main-ul .drop-list {position: relative}
+
+nav .main-ul .drop-list:hover .sec-ul {display: inline-block}
+
+/* end of the drop down list*/
+
+.main-ul a {
+    text-decoration: none;
+}
+
+
+
+@media(max-width : 1119px) {
+    nav {padding: 20px 0}
+
+    nav .main-ul {
+        display: none;
+        position: static;
+        margin: 12px 0
+    }
+
+    nav .media-div {
+        float: right;
+        margin-top: 0;
+        align-items: center;
+        justify-content: space-between
+    }
+
+    nav .media-div .search .search-bar .search-bar {
+        float: right;
+        margin-right: 10px;
+    }
+
+    nav .media-div .search {float: left}
+
+    nav .menu-label {
+        display: inline-block;
+        margin-right: 20px
+    }
+
+    nav .main-ul .media-li {display: block}
+
+    nav .main-ul .active {
+        background-color: #27C3A2;
+        color: white;
+    }
+
+    nav .logo {margin-left: 20px}
+
+    nav .main-ul .drop-list {display: none}
+
+    .ch:checked ~ .main-ul {
+        display: block;
+        background-color: #fff;
+        transform: translate(0, 0);
+        padding: 0;
+        width: 100%
+    }
+
+    .ch:checked ~ .main-ul li {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 18px;
+    }
+
+    .ch:checked ~ .main-ul .drop-list {
+        display: none
+    }
+
+    nav .main-ul li:hover {
+        background-color: #27C3A2;
+        color: white;
+    }
+}
+
+@media(max-width : 767px) {    
+    nav .menu-label {display: inline-block;}
+    
+    nav .search {float: none;}
+
+    .media-div .search .search-bar {width: 0;}
+
+    .fixed-fix {height: 85px;}
+
+    .media-div .search .search-ch:checked ~ .search-bar {
+        width: 55%;
+        display: inline-block;
+    }
+}
+
+@media (max-width:700px) {
+    nav {height: 120px;}
+
+    nav .media-div {
+        float: none;
+        margin: 9px 0;
+    }
+    
+    nav .media-div .search  .fa-search {margin: 0}
+    
+    nav label {float: left}
+
+    .media-div .search .search-bar {
+        float: left;
+        margin: 0
+    }
+}
+
+
+/*
+============================================
+            end nav
+============================================
+*/
+
+
+/*
+============================================
+            start form
+============================================
+*/
+.main-contain{
+    width: 80%;
+    margin: auto
+}
+.main-contain .contain{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.main-contain  h1 {
+    text-align: center;
+    font-size: 40px;
+    color: rgba(112, 94, 207, 0.76);
+    margin: 50px 0;
+    font-family: 'Quicksand', sans-serif
+}
+
+.main-contain .contain button {
+    padding: 20px 35px;
+    font-size: 20px;
+    background-color: #705ECF;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    margin: 10px 20px;
+    
+}
+.main-contain .contain button:hover{
+    background-color: #9a8edb;
+}
+
+.up {font-size: 50px;}
+
+.contain form {
+    width: 50%;
+}
+.contain .form-image{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px
+}
+.contain .form-image img {
+    width: 70%;
+    background-size: cover;
+    height: 500px;
+}
+
+
+.data {
+    margin-top: 30px;
+    float: left;
+    width: 40%;
+    margin-left: 20px
+}
+.data p{
+    color: #705ECF;
+    font-size: 22px;
+    margin-bottom: 10px
+}
+.contain form input {
+    width: 90%;
+    height: 60px;
+    font-size: 17px;
+    border: 2px solid #555;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: 0    
+}
+.contain .message textarea{
+    height: 300px;
+    width: 90%;
+    resize:none;
+    border: none;
+    font-size : 20px;
+    border: 2px solid #555;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: 0 
+}
+
+.contain .message {
+    width: 90%
+        
+}
+@media (max-width:1119px){
+    .contain form input{
+        font-size: 13px
+    }
+    .data p{
+        font-size: 18px
+    }
+}
+@media (max-width:892px){
+    .media-div .search .search-bar{
+        font-size: 10px;
+            padding: 15px;
+
+    }
+    .contain{
+        flex-wrap: wrap
+    }
+    .contain form{
+        width: 100%
+    }
+    .contain form .data input{
+        width: 90%
+    }
+    .contain form .data textarea{
+        width: 100%;
+        font-size: 15px
+    }
+    .contain .data{
+        margin: 0 0 30px
+    }
+    .data p{
+        font-size: 18px
+    }
+    .contain .form-image{
+        width: 70%;
+        height: auto;
+        margin: 0 auto 50px
+    }
+    .contain .form-image img{
+        width: 100%;
+        height: 400px
+    }
+    .main-contain .contain button{
+        width: 90%;
+        margin: 0
+    }
+    .data {
+        width: 100%;
+    }
+}
+
+/*
+============================================
+            end form
+============================================
+*/
+
+.map{
+    height:100vh;
+    width:100%; 
+    margin-bottom: 50px;
+    position: static
+}
+
+/*
+============================================
+            start update
+============================================
+*/
+.update {
+    margin: auto;
+    height: 400px;
+    position: relative;
+    background-color: #F8F9FA;
+
+}
+
+.update .update-contain{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+
+.update .update-contain i{
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: #05B993;
+    font-size: 25px;
+    margin-bottom: 20px
+}
+.update .update-contain h2{
+    color: #705ECF;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 42px;
+    margin-bottom: 30px
+    
+}
+.update  form{
+}
+.update input {
+    height: 50px;
+    font-size: 15px;
+    margin: 0;
+    float: left;
+    padding: 20px 0 20px 15px;
+    width: 60%;
+    border: 0
+}
+
+.update p{
+    color: #555;
+    font-family: tahoma;
+    margin-bottom: 40px;
+    line-height: 1.7
+}
+.update button {
+    font-size: 16px;
+    background-color: #705ECF;
+    border: 0;
+    cursor: pointer;
+    color: white;
+    height: 50px;
+    float: left;
+    padding: 10px 10%;
+
+}    
+
+@media (max-width:892px){
+    .update .update-contain i{
+        font-size: 20px;
+        margin-bottom: 10px
+    }
+    .update .update-contain h2{
+        font-size: 22px;
+        margin-bottom: 10px
+    }
+    .update p{
+        margin-bottom: 10px;
+        line-height: normal;
+        font-size: 12px
+    }
+    .update input{
+        width: 60%;
+        font-size: 12px
+    }
+    .update button{
+        font-size: 12px;
+        padding: 10px 2%
+    } 
+}
+@media (max-width:415px){
+    .update input{
+        width: 100%;
+        font-size: 16px;
+        padding: 15px 0 15px 5px;
+        text-align: center
+    }
+    .update button{
+        font-size: 15px;
+        padding: 5px 10%;
+        margin: 10px 0 0 30px
+    } 
+}
+/*
+============================================
+            end update
+============================================
+*/
+
+
+
+
+
+/*
+============================================
+            start footer
+============================================
+*/
+footer{
+    border: 1px solid #999;
+    border-width: 1px 0 0 ;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background-color: #F8F9FA;
+    font-family: arial;
+    box-sizing: border-box;
+}
+footer .social i{
+    color: #705ECF;
+    cursor: pointer;
+    font-size: 19px
+}
+footer .social i:hover{color: #27C3A2}
+footer .fa-level-up{color: #27C3A2;}
+@media(max-width : 767px){
+    footer{
+        padding: 20px 20px;
+    }
+    footer .rights{
+        font-size:10px 
+    }
+    footer .fa-level-up{
+        font-size: 20px
+    }
+    footer .social{
+        font-size: 0px
+    }
+    footer .social i{
+        margin-left: 3px;
+        font-size: 12px
+    }
+}
+
+/*
+============================================
+            end footer
+============================================
+*/

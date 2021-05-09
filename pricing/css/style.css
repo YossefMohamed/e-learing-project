@@ -1,0 +1,411 @@
+*{margin: 0}
+.clear-fix{clear: both}
+.fixed-fix{height: 85px}
+/*
+============================================
+            start nav bar
+============================================
+*/
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 20px #ededed;
+    background-color: white;
+    z-index: 2;
+}
+
+nav .logo {
+    font-size: 34px;
+    color: #705ECF;
+    font-family: arial;
+    text-shadow: 1px 1px 1px #555;
+    display: inline-block
+}
+
+nav .menu-label {
+    background-image: url('../images/iconfinder_Menu_green_1891031.png');
+    float: right;
+    background-size: cover;
+    padding: 20px;
+    display: none;
+}
+nav .media-div .search {float: right}
+
+nav .media-div .search .search-bar {
+    padding: 12px 10px;
+    border: 0;
+    background-color: #F7F7F7;
+    outline: 0;
+    letter-spacing: 2px;
+    color: #444;
+    float: left;
+    transition: all .3s linear;
+    width: 0px;
+}
+
+nav .media-div .search .fa-search {
+    padding: 12px 15px;
+    background-color: #27C3A2;
+    font-size: 16px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+    float: left;
+}
+
+.media-div .search .search-ch:checked ~ .search-bar {
+    width: 160px;
+    display: inline-block;
+}
+
+
+
+nav .media-div {
+    float: right;
+    display: flex;
+    justify-content: center;
+}
+
+nav .fa-search:hover {background-color: #6fc3b1;}
+
+nav .media-div a {
+    padding: 12px 15px;
+    font-size: 14px;
+    background-color: #705ECF;
+    border-radius: 10px;
+    transition: background-color .2s ease-in-out;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: arial;
+    flex-shrink: 0;
+}
+
+nav .media-div a:hover {background-color: #8d80d0}
+
+
+
+nav .main-ul {
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+nav .main-ul .active {color: #27C3A2}
+
+nav .main-ul li {
+    display: inline-block;
+    color: #000;
+    font-family: arial;
+    transition: color .2s ease-in-out;
+    font-size: 15px;
+    padding-right: 15px
+}
+
+nav .main-ul li:hover {color: #27C3A2}
+
+nav .main-ul .media-li {display: none}
+
+/* start of the drop down list*/
+
+nav .main-ul .drop-list {cursor: pointer}
+
+nav .main-ul .drop-list .sec-ul {
+    background: #111;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    padding: 20px;
+    width: 120px;
+    display: none;
+}
+
+nav .main-ul .drop-list .sec-ul li {color: white;}
+
+nav .main-ul .drop-list .sec-ul li:hover {color: #27C3A2}
+
+nav .main-ul .drop-list {position: relative}
+
+nav .main-ul .drop-list:hover .sec-ul {display: inline-block}
+
+/* end of the drop down list*/
+
+.main-ul a {
+    text-decoration: none;
+}
+
+
+
+@media(max-width : 1119px) {
+    nav {padding: 20px 0}
+
+    nav .main-ul {
+        display: none;
+        position: static;
+        margin: 12px 0
+    }
+
+    nav .media-div {
+        float: right;
+        margin-top: 0;
+        align-items: center;
+        justify-content: space-between
+    }
+
+    nav .media-div .search .search-bar .search-bar {
+        float: right;
+        margin-right: 10px;
+    }
+
+    nav .media-div .search {float: left}
+
+    nav .menu-label {
+        display: inline-block;
+        margin-right: 20px
+    }
+
+    nav .main-ul .media-li {display: block}
+
+    nav .main-ul .active {
+        background-color: #27C3A2;
+        color: white;
+    }
+
+    nav .logo {margin-left: 20px}
+
+    nav .main-ul .drop-list {display: none}
+
+    .ch:checked ~ .main-ul {
+        display: block;
+        background-color: #fff;
+        transform: translate(0, 0);
+        padding: 0;
+        width: 100%
+    }
+
+    .ch:checked ~ .main-ul li {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 18px;
+    }
+
+    .ch:checked ~ .main-ul .drop-list {
+        display: none
+    }
+
+    nav .main-ul li:hover {
+        background-color: #27C3A2;
+        color: white;
+    }
+}
+
+@media(max-width : 767px) {    
+    nav .menu-label {display: inline-block;}
+    
+    nav .search {float: none;}
+
+    .media-div .search .search-bar {width: 0;}
+
+    .fixed-fix {height: 85px;}
+
+    .media-div .search .search-ch:checked ~ .search-bar {
+        width: 55%;
+        display: inline-block;
+    }
+}
+
+@media (max-width:700px) {
+    nav {height: 120px;}
+
+    nav .media-div {
+        float: none;
+        margin: 9px 0;
+    }
+    
+    nav .media-div .search  .fa-search {margin: 0}
+    
+    nav label {float: left}
+
+    .media-div .search .search-bar {
+        float: left;
+        margin: 0
+    }
+}
+
+
+/*
+============================================
+            end nav
+============================================
+*/
+
+
+
+/*
+============================================
+            start pricing
+============================================
+*/
+h2.title{
+    text-align: center;
+    margin: 50px 0 100px;
+    font-family: 'Quicksand' ,arial;
+    font-size: 40px;
+    color: #9285DA;
+    letter-spacing: 2.7px
+}
+.main-container{
+    display: flex;
+    width: 75%;
+    margin: 20px auto;
+    justify-content: space-between;
+}
+.main-container .adv{
+    box-shadow: 0px 0px 9px #848484
+}
+.prices {
+    transition: 0.5s all linear;
+    position: relative;
+    border: 1px solid #ddd;
+    text-align: center;
+    width: 20%;
+    height: 400px
+}
+.prices:hover{
+    box-shadow: 0px 0px 9px #848484
+}
+.main-container .prices-top {
+    position: absolute;
+    top: -22%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+.prices-top h3 {
+    font-size: 30px;
+    background: #705ecf;
+    color: white;
+    border-radius: 50%;
+    width: 75px;
+    height: 75px;
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
+    line-height: 2.4;
+}
+
+.prices-bottom ul{
+    padding: 0;
+    margin-bottom: 60px
+}
+
+.prices-bottom ul li {
+    font-size: 16px;
+    color: #656161;
+    list-style: none;
+    margin: 12px 0;
+}
+.prices-bottom hr{
+    width: 81%;
+    color: #999;
+    margin: 30px auto;
+    
+}
+
+.prices-bottom .prices-h{
+    margin: 50px 0 20px
+}
+.prices-bottom h4 {
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+    font-family: arial;
+}
+.prices-bottom a{
+    padding: 15px 25px;
+    background-color: #37C7A9;
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    font-family: tahoma;
+    letter-spacing: 1.5px
+}
+@media(max-width:1119px){
+    .main-container{
+        flex-wrap: wrap;
+    }
+    .prices{
+        width: 40%;
+        margin-bottom: 70px
+    }
+}
+
+@media(max-width:676px){
+    .prices{
+        width: 100%;
+    }
+}
+
+
+
+/*
+============================================
+            end pricing
+============================================
+*/
+
+
+/*
+============================================
+            start footer
+============================================
+*/
+footer{
+    border: 1px solid #999;
+    border-width: 1px 0 0 ;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background-color: #F8F9FA;
+    font-family: arial;
+    box-sizing: border-box;
+}
+footer .social i{
+    color: #705ECF;
+    cursor: pointer;
+    font-size: 19px
+}
+footer .social i:hover{color: #27C3A2}
+footer .fa-level-up{color: #27C3A2;}
+@media(max-width : 767px){
+    footer{
+        padding: 20px 20px;
+    }
+    footer .rights{
+        font-size:10px 
+    }
+    footer .fa-level-up{
+        font-size: 20px
+    }
+    footer .social{
+        font-size: 0px
+    }
+    footer .social i{
+        margin-left: 3px;
+        font-size: 12px
+    }
+}
+
+/*
+============================================
+            end footer
+============================================
+*/

@@ -1,0 +1,509 @@
+*{margin: 0}
+.clear-fix{clear: both}
+.fixed-fix{height: 85px}
+.main-container{
+    width: 85%;
+    margin: auto
+}
+/*
+============================================
+            start nav bar
+============================================
+*/
+nav {
+    position: fixed;
+    width: 100%;
+    height: 75px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+    box-shadow: 0px 1px 20px #ededed;
+    background-color: white;
+    z-index: 2;
+}
+
+nav .logo {
+    font-size: 34px;
+    color: #705ECF;
+    font-family: arial;
+    text-shadow: 1px 1px 1px #555;
+    display: inline-block
+}
+
+nav .menu-label {
+    background-image: url('../images/iconfinder_Menu_green_1891031.png');
+    float: right;
+    background-size: cover;
+    padding: 20px;
+    display: none;
+}
+nav .media-div .search {float: right}
+
+nav .media-div .search .search-bar {
+    padding: 12px 10px;
+    border: 0;
+    background-color: #F7F7F7;
+    outline: 0;
+    letter-spacing: 2px;
+    color: #444;
+    float: left;
+    transition: all .3s linear;
+    width: 0px;
+}
+
+nav .media-div .search .fa-search {
+    padding: 12px 15px;
+    background-color: #27C3A2;
+    font-size: 16px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: background-color .2s ease-in-out;
+    float: left;
+}
+
+.media-div .search .search-ch:checked ~ .search-bar {
+    width: 160px;
+    display: inline-block;
+}
+
+
+
+nav .media-div {
+    float: right;
+    display: flex;
+    justify-content: center;
+}
+
+nav .fa-search:hover {background-color: #6fc3b1;}
+
+nav .media-div a {
+    padding: 12px 15px;
+    font-size: 14px;
+    background-color: #705ECF;
+    border-radius: 10px;
+    transition: background-color .2s ease-in-out;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+    font-family: arial;
+    flex-shrink: 0;
+}
+
+nav .media-div a:hover {background-color: #8d80d0}
+
+
+
+nav .main-ul {
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+nav .main-ul .active {color: #27C3A2}
+
+nav .main-ul li {
+    display: inline-block;
+    color: #000;
+    font-family: arial;
+    transition: color .2s ease-in-out;
+    font-size: 15px;
+    padding-right: 15px
+}
+
+nav .main-ul li:hover {color: #27C3A2}
+
+nav .main-ul .media-li {display: none}
+
+/* start of the drop down list*/
+
+nav .main-ul .drop-list {cursor: pointer}
+
+nav .main-ul .drop-list .sec-ul {
+    background: #111;
+    border-radius: 5px;
+    color: white;
+    position: absolute;
+    padding: 20px;
+    width: 120px;
+    display: none;
+}
+
+nav .main-ul .drop-list .sec-ul li {color: white;}
+
+nav .main-ul .drop-list .sec-ul li:hover {color: #27C3A2}
+
+nav .main-ul .drop-list {position: relative}
+
+nav .main-ul .drop-list:hover .sec-ul {display: inline-block}
+
+/* end of the drop down list*/
+
+.main-ul a {
+    text-decoration: none;
+}
+
+
+
+@media(max-width : 1119px) {
+    nav {padding: 20px 0}
+
+    nav .main-ul {
+        display: none;
+        position: static;
+        margin: 12px 0
+    }
+
+    nav .media-div {
+        float: right;
+        margin-top: 0;
+        align-items: center;
+        justify-content: space-between
+    }
+
+    nav .media-div .search .search-bar .search-bar {
+        float: right;
+        margin-right: 10px;
+    }
+
+    nav .media-div .search {float: left}
+
+    nav .menu-label {
+        display: inline-block;
+        margin-right: 20px
+    }
+
+    nav .main-ul .media-li {display: block}
+
+    nav .main-ul .active {
+        background-color: #27C3A2;
+        color: white;
+    }
+
+    nav .logo {margin-left: 20px}
+
+    nav .main-ul .drop-list {display: none}
+
+    .ch:checked ~ .main-ul {
+        display: block;
+        background-color: #fff;
+        transform: translate(0, 0);
+        padding: 0;
+        width: 100%
+    }
+
+    .ch:checked ~ .main-ul li {
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 18px;
+    }
+
+    .ch:checked ~ .main-ul .drop-list {
+        display: none
+    }
+
+    nav .main-ul li:hover {
+        background-color: #27C3A2;
+        color: white;
+    }
+}
+
+@media(max-width : 767px) {    
+    nav .menu-label {display: inline-block;}
+    
+    nav .search {float: none;}
+
+    .media-div .search .search-bar {width: 0;}
+
+    .fixed-fix {height: 85px;}
+
+    .media-div .search .search-ch:checked ~ .search-bar {
+        width: 55%;
+        display: inline-block;
+    }
+}
+
+@media (max-width:700px) {
+    nav {height: 120px;}
+
+    nav .media-div {
+        float: none;
+        margin: 9px 0;
+    }
+    
+    nav .media-div .search  .fa-search {margin: 0}
+    
+    nav label {float: left}
+
+    .media-div .search .search-bar {
+        float: left;
+        margin: 0
+    }
+}
+
+
+/*
+============================================
+            end nav
+============================================
+*/
+/*
+============================================
+            end nav bar
+============================================
+*/
+
+/*
+============================================
+            start section
+============================================
+*/
+.main-container h2{
+    text-align: center;
+    color: rgba(112, 94, 207, 0.76);
+    font-family: 'Quicksand', sans-serif;
+    font-size: 40px;
+    margin-top: 50px
+}
+.main-container .media-note{
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #555;
+    display: none
+}
+section{
+    padding: 15px;
+    border: 1px solid #705ECF;
+    border-radius: 10px;
+    margin-top: 40px
+}
+section .image-div{
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0
+}
+section .image-div:after{
+    font-size: 27px;
+    position: absolute;
+    bottom: -100px;
+    width: inherit;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.78);
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #222;
+    transition: all .2s linear;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border: 1px solid #555;
+    border-width: 1px 0 0 ;
+}
+
+.main-container section:hover > .flex-container1 .image-div:after{
+    bottom: 0px
+}
+section .flex-container1{
+    display: flex;
+}
+.p1{
+    color: #555;
+    font-family: tahoma;
+    font-size: 18px;
+    margin-left: 20px;
+    margin-top: 10px
+}
+section .flex-container2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center
+}
+section button{
+    padding: 10px 15px;
+    border: 0;
+    background-color: #27C3A2;
+    font-size: 24px;
+    color: white;
+    outline: 0;
+    border-radius: 10px
+}
+section .flex-container2 .teachers{
+    position: relative;
+}
+section .flex-container2 price ,section .flex-container2 sorry , section .flex-container2 soon{
+    padding: 10px;
+    color: #444;
+    font-family: 'Quicksand', sans-serif;
+
+}
+section .flex-container2 span{
+    font-size: 26px;
+    color: rgba(112, 94, 207, 0.61);
+    font-family: arial;
+}
+section .flex-container2 .teachers div{
+    width: 40px;
+    height: 40px;
+    border: 1px solid #705ECF;
+    border-radius: 50%;
+    float: left;
+    background-size: cover;
+    margin-right: 20px
+}
+
+.coding:after{content: 'CODING';}
+.coding{background-image: url('../images/coding-php-or-html-on-laptop-programming-vector-15612975.png');}
+.art:after{content: 'ART';}
+.art{background-image: url('../images/flar-art-tools-pack_23-2147536331.jpg')}
+.business:after{content: 'BUSINESS';}
+.business {background-image: url('../images/500_F_126851038_zi7nBbmS0QD2QF0n2ePfqHKcQTlW5zKv.jpg')}
+
+.photograph:after{content: 'PHOTOGRAPH';}
+.photograph{background-image: url('../images/photograph.png')}
+.logo-design:after{content: 'LOGO DESIGN';}
+.logo-design{background-image: url('../images/ee5294b9.png')}
+.language:after{content: 'LANGUAGE';}
+.language{background-image: url('../images/englisch-design-hintergrund_1010-577.jpg')}
+.soft:after{content: 'SOFT-SKILLS';}
+.soft{background-image: url('../images/skilling-me-softly-002.png')}
+.PS:after{content: 'PHOTOSHOP';}
+.PS{background-image: url('../images/photoshop-logo-masterclass-photo.png')}
+.sale{background-color: rgba(105, 196, 105, 0.71)}
+    .not-sale{background-color: rgba(182, 196, 105, 0.71)}
+sorry{background-color: rgba(255, 0, 0, 0.59)}
+.sorry{background-color: rgba(255, 0, 0, 0.59)}
+
+soon{background-color: rgba(0, 0, 128, 0.42)}
+table{
+    border-collapse: collapse;
+    margin: 50px 0 
+}
+table tr{
+    text-align: center;
+}
+td ,th{
+    border: 2px solid #705ECF;
+    color: #444;
+    padding: 15px 10px
+}
+@media (max-width:767px){
+    section .flex-container1{
+        flex-wrap: wrap;
+        justify-content: center
+    }
+    section .flex-container1 p{
+        font-size: 17px
+    }
+    section .flex-container1 .image-div{
+        width: 230px;
+        height: 230px
+    }
+    section .flex-container2{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    section .flex-container2 sorry ,section .flex-container2 price{margin: 10px 0;width: 80% ;text-align: center}
+    section .flex-container2 .teachers span{
+        margin: 10px 0;display: block ;text-align: center
+    }
+    .main-container .media-note{
+        display: block
+    }
+}
+/*
+============================================
+            end section
+============================================
+*/
+
+
+
+
+
+/*
+============================================
+            start footer
+============================================
+*/
+footer{
+    border: 1px solid #999;
+    border-width: 1px 0 0 ;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+    background-color: #F8F9FA;
+    font-family: arial;
+    box-sizing: border-box;
+}
+footer .social i{
+    color: #705ECF;
+    cursor: pointer;
+    font-size: 19px
+}
+footer .social i:hover{color: #27C3A2}
+footer .fa-level-up{color: #27C3A2;}
+@media(max-width : 767px){
+    footer{
+        padding: 20px 20px;
+    }
+    footer .rights{
+        font-size:10px 
+    }
+    footer .fa-level-up{
+        font-size: 20px
+    }
+    footer .social{
+        font-size: 0px
+    }
+    footer .social i{
+        margin-left: 3px;
+        font-size: 12px;
+    }
+}
+
+/*
+============================================
+            end footer
+============================================
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

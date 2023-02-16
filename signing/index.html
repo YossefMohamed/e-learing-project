@@ -1,183 +1,214 @@
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Quicksand"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="icon" href="images/Capture.png" />
+  </head>
 
-<head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="icon" href="images/Capture.png">
-
-</head>
-
-
-<body>
-
+  <body>
     <nav>
-        <div class="logo">
-            <i class="fa fa-linode mr-2" style="text-shadow: 0px 0px"></i>
-            <span class="logo-ward">Groovy</span>
+      <div class="logo">
+        <i class="fa fa-linode mr-2" style="text-shadow: 0px 0px"></i>
+        <span class="logo-ward">Groovy</span>
+      </div>
+      <label for="check" class="menu-label"></label>
+      <div class="media-div">
+        <div class="search">
+          <input class="search-ch" type="checkbox" id="ch2" hidden />
+          <input class="search-bar" type="text" placeholder="Search Here" />
+          <label for="ch2"><i class="fa fa-search"></i></label>
         </div>
-        <label for="check" class="menu-label"></label>
-        <div class="media-div">
-            <div class="search">
-                <input class="search-ch" type="checkbox" id="ch2" hidden>
-                <input class="search-bar" type="text" placeholder="Search Here">
-                <label for="ch2"><i class="fa fa-search"></i></label>
-            </div>
-            <a href="#">Sign Up/In</a>
-        </div>
-        <div class="clear-fix"></div>
-        <input class="ch" type="checkbox" id="check" hidden>
-        <ul class="main-ul">
-            <a href="../home/index.html">
-                <li>Home</li>
+        <a href="#">Sign Up/In</a>
+      </div>
+      <div class="clear-fix"></div>
+      <input class="ch" type="checkbox" id="check" hidden />
+      <ul class="main-ul">
+        <a href="../index.html">
+          <li>Home</li>
+        </a>
+        <a href="../about/index.html">
+          <li>About Us</li>
+        </a>
+        <a href="../course/index.html">
+          <li>Cources</li>
+        </a>
+        <a href="../pricing/index.html">
+          <li>Pricing</li>
+        </a>
+        <a href="../crew/index.html">
+          <li>Our Crew</li>
+        </a>
+        <li class="drop-list">
+          See More <i class="fa fa-chevron-down"></i>
+          <ul class="sec-ul">
+            <a href="../partners/index.html">
+              <li style="margin-bottom: 10px">Our Parteners</li>
             </a>
-            <a href="../about/index.html">
-                <li>About Us</li>
+            <a href="../contact/index.html">
+              <li>Contact Us</li>
             </a>
-            <a href="../course/index.html">
-                <li>Cources</li>
-            </a>
-            <a href="../pricing/index.html">
-                <li>Pricing</li>
-            </a>
-            <a href="../crew/index.html">
-                <li>Our Crew</li>
-            </a>
-            <li class="drop-list">
-                See More <i class="fa fa-chevron-down"></i>
-                <ul class="sec-ul">
-                    <a href="../partners/index.html">
-                        <li style="margin-bottom: 10px">Our Parteners</li>
-                    </a>
-                    <a href="../contact/index.html">
-                        <li>Contact Us</li>
-                    </a>
-                </ul>
-            </li>
-            <a href="../partners/index.html" class="media-li">
-                <li>Our Parteners</li>
-            </a>
-            <a href="../contact/index.html" class="media-li">
-                <li>Contact Us</li>
-            </a>
-        </ul>
+          </ul>
+        </li>
+        <a href="../partners/index.html" class="media-li">
+          <li>Our Parteners</li>
+        </a>
+        <a href="../contact/index.html" class="media-li">
+          <li>Contact Us</li>
+        </a>
+      </ul>
     </nav>
     <div class="fixed-fix" id="up"></div>
 
-   
-   
-   
-   
-   
     <div class="cont">
-        <div class="signin">
-            <h2>Sign Up for free</h2>
-            <h5>Join to us by only one step !</h5><br>
+      <div class="signin">
+        <h2>Sign Up for free</h2>
+        <h5>Join to us by only one step !</h5>
+        <br />
 
-            <form class="formm">
-               <label for="username">Username:</label>
-                <input type="text" required min="7" max="18" required id="username" onblur="chngeBorderColor2(this)" onfocus="chngeBorderColor(this)" autocomplete="off" autofocus>
-                <label for="email">E-mail Adress:</label>
-                <input type="email" required id="email" onblur="chngeBorderColor2(this)" onfocus="chngeBorderColor(this)" autocomplete="off" >
-            
-                <label for="password">Password:</label>
-                <input type="password" required min="7" max="18" required id="password" onblur="chngeBorderColor2(this)" onfocus="chngeBorderColor(this)" autocomplete="off">
-                <label for="Date">Date Of birth:</label>
-                
-                
-                
-                <select name="day" id="day">
-                    <option value="" disabled selected>Day</option>
-                </select>
-                <select name="month">
-                    <option value="" disabled selected>Month</option>
-                    <option value="jun">jun</option>
-                    <option value="feb">Feb</option>
-                    <option value="march">March</option>
-                    <option value="apr">April</option>
-                    <option value="may">May</option>
-                    <option value="june">June</option>
-                    <option value="july">July</option>
-                    <option value="aug">Aug</option>
-                    <option value="sept">Sept</option>
-                    <option value="oct">Oct</option>
-                    <option value="nov">Nov</option>
-                    <option value="dec">Dec</option>
-                </select>
-                <select name="year" id="year">
-                    <option value="" disabled selected>Year</option>
-                </select>
-                <br><br>
-                <input type="submit" name="submit" value="Signup" class="a2"><br>
-                <h5 class="terms">By clicking "Sign up", you agree to <a href="#" class="aa">our terms of service &amp; privacy policy</a>
-                </h5>
-            </form>
+        <form class="formm">
+          <label for="username">Username:</label>
+          <input
+            type="text"
+            required
+            min="7"
+            max="18"
+            required
+            id="username"
+            onblur="chngeBorderColor2(this)"
+            onfocus="chngeBorderColor(this)"
+            autocomplete="off"
+            autofocus
+          />
+          <label for="email">E-mail Adress:</label>
+          <input
+            type="email"
+            required
+            id="email"
+            onblur="chngeBorderColor2(this)"
+            onfocus="chngeBorderColor(this)"
+            autocomplete="off"
+          />
+
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            required
+            min="7"
+            max="18"
+            required
+            id="password"
+            onblur="chngeBorderColor2(this)"
+            onfocus="chngeBorderColor(this)"
+            autocomplete="off"
+          />
+          <label for="Date">Date Of birth:</label>
+
+          <select name="day" id="day">
+            <option value="" disabled selected>Day</option>
+          </select>
+          <select name="month">
+            <option value="" disabled selected>Month</option>
+            <option value="jun">jun</option>
+            <option value="feb">Feb</option>
+            <option value="march">March</option>
+            <option value="apr">April</option>
+            <option value="may">May</option>
+            <option value="june">June</option>
+            <option value="july">July</option>
+            <option value="aug">Aug</option>
+            <option value="sept">Sept</option>
+            <option value="oct">Oct</option>
+            <option value="nov">Nov</option>
+            <option value="dec">Dec</option>
+          </select>
+          <select name="year" id="year">
+            <option value="" disabled selected>Year</option>
+          </select>
+          <br /><br />
+          <input type="submit" name="submit" value="Signup" class="a2" /><br />
+          <h5 class="terms">
+            By clicking "Sign up", you agree to
+            <a href="#" class="aa">our terms of service &amp; privacy policy</a>
+          </h5>
+        </form>
+      </div>
+      <div class="signup">
+        <h2>Sign in</h2>
+        <h5>have an account? Sign in !</h5>
+        <br />
+        <form class="formm">
+          <label for="email">E-mail or Username:</label>
+          <input
+            type="email"
+            required
+            id="email"
+            onblur="chngeBorderColor2(this)"
+            onfocus="chngeBorderColor(this)"
+            autocomplete="off"
+          /><br />
+          <label for="password2">Password:</label>
+          <input
+            type="password"
+            required
+            id="password2"
+            onblur="chngeBorderColor2(this)"
+            onfocus="chngeBorderColor(this)"
+            autocomplete="off"
+          />
+          <input type="submit" name="submit" value="Signin" class="a23" />
+        </form>
+        <div>
+          <a href="#" class="face"><i class="fa fa-facebook-f icon"></i></a>
+          <a href="#" class="google"><i class="fa fa-google icon"></i></a>
         </div>
-        <div class="signup">
-            <h2>Sign in</h2>
-            <h5>have an account? Sign in !</h5>
-            <br>
-            <form class="formm">
-                <label for="email">E-mail or Username:</label>
-                <input type="email" required id="email" onblur="chngeBorderColor2(this)" onfocus="chngeBorderColor(this)" autocomplete="off"><br>
-                <label for="password2">Password:</label>
-                <input type="password" required id="password2" onblur="chngeBorderColor2(this)" onfocus="chngeBorderColor(this)" autocomplete="off">
-                <input type="submit" name="submit" value="Signin" class="a23">
-            </form>
-            <div>
-                <a href="#" class="face"><i class="fa fa-facebook-f icon"></i></a>
-                <a href="#" class="google"><i class="fa fa-google icon"></i></a>
-            </div>
-        </div>
+      </div>
     </div>
 
     <footer>
-        <div class="social">
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-google-plus"></i>
-            <i class="fa fa-instagram"></i>
-        </div>
-        <div class="rights">
-            &copy; 2019 groovy.All Rights Reserved
-        </div>
-        <div>
-            <a href="#up"><i class="fa fa-level-up fa-3x"></i></a>
-        </div>
+      <div class="social">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-google-plus"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+      <div class="rights">&copy; 2019 groovy.All Rights Reserved</div>
+      <div>
+        <a href="#up"><i class="fa fa-level-up fa-3x"></i></a>
+      </div>
     </footer>
-    
-    
+
     <script>
-        var years,
-            d1 = document.getElementById('year');
-        for (years = 1990; years <= 2017; years = years + 1) {
-            var d = document.createElement('option');
-            d1.appendChild(d);
-            d.innerHTML = years;
+      var years,
+        d1 = document.getElementById("year");
+      for (years = 1990; years <= 2017; years = years + 1) {
+        var d = document.createElement("option");
+        d1.appendChild(d);
+        d.innerHTML = years;
+      }
+      var days,
+        d2 = document.getElementById("day");
+      for (days = 1; days <= 31; days = days + 1) {
+        var d = document.createElement("option");
+        d2.appendChild(d);
+        d.innerHTML = days;
+      }
+      function chngeBorderColor(i) {
+        "use strict";
+        i.style.borderColor = "#705ECF";
+      }
+      function chngeBorderColor2(i) {
+        "use strict";
+        if (i.value === "") {
+          i.style.borderColor = "#555";
+        } else {
+          i.style.borderColor = "#705ECF";
         }
-        var days,
-            d2 = document.getElementById('day');
-        for (days = 1; days <= 31; days = days + 1) {
-            var d = document.createElement('option');
-            d2.appendChild(d);
-            d.innerHTML = days;
-        }
-        function chngeBorderColor(i) {
-            "use strict";
-            i.style.borderColor = "#705ECF";
-        }
-        function chngeBorderColor2(i) {
-            "use strict";
-            if (i.value === "") {
-                i.style.borderColor = "#555";
-            } else {
-                i.style.borderColor = "#705ECF";
-            }
-        }
+      }
     </script>
-
-</body>
-
-
+  </body>
 </html>

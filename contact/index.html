@@ -1,109 +1,156 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Contact</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="icon" href="images/Capture.png">
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Quicksand" rel="stylesheet">
-
-</head>
-<body>
-	<nav>
-        <div class="logo">
-            <i class="fa fa-linode mr-2" style="text-shadow: 0px 0px"></i>
-            <span class="logo-ward">Groovy</span>
+  <head>
+    <title>Contact</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="icon" href="images/Capture.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Quicksand"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <i class="fa fa-linode mr-2" style="text-shadow: 0px 0px"></i>
+        <span class="logo-ward">Groovy</span>
+      </div>
+      <label for="check" class="menu-label"></label>
+      <div class="media-div">
+        <div class="search">
+          <input class="search-ch" type="checkbox" id="ch2" hidden />
+          <input class="search-bar" type="text" placeholder="Search Here" />
+          <label for="ch2"><i class="fa fa-search"></i></label>
         </div>
-        <label for="check" class="menu-label"></label>
-        <div class="media-div">
-            <div class="search">
-                <input class="search-ch" type="checkbox" id="ch2" hidden>
-                <input class="search-bar" type="text" placeholder="Search Here">
-                <label for="ch2"><i class="fa fa-search"></i></label>
-            </div>
-            <a href="../signing/index.html">Sign Up/In</a>
-        </div>
-        <div class="clear-fix"></div>
-        <input class="ch" type="checkbox" id="check" hidden> 
-        <ul class="main-ul">
-            <a href="../home/index.html"><li>Home</li></a>
-            <a href="../about/index.html"><li>About Us</li></a>
-            <a href="../course/index.html"><li>Cources</li></a>
-            <a href="../pricing/index.html"><li>Pricing</li></a>
-            <a href="../crew/index.html"><li>Our Crew</li></a>
-               <li class="drop-list active">
-                    See More <i class="fa fa-chevron-down"></i>
-                <ul class="sec-ul">
-                    <a href="../partners/index.html"><li style="margin-bottom: 10px">Our Parteners</li></a>
-                    <a href="../contact/index.html"><li  class="active">Contact Us</li></a>
-                </ul>
-               </li>
-            <a href="../partners/index.html" class="media-li"><li>Our Parteners</li></a>           
-            <a href="../contact/index.html" class="media-li"><li  class="media-li-curr">Contact Us</li></a>           
-        </ul>
+        <a href="../signing/index.html">Sign Up/In</a>
+      </div>
+      <div class="clear-fix"></div>
+      <input class="ch" type="checkbox" id="check" hidden />
+      <ul class="main-ul">
+        <a href="../index.html"><li>Home</li></a>
+        <a href="../about/index.html"><li>About Us</li></a>
+        <a href="../course/index.html"><li>Cources</li></a>
+        <a href="../pricing/index.html"><li>Pricing</li></a>
+        <a href="../crew/index.html"><li>Our Crew</li></a>
+        <li class="drop-list active">
+          See More <i class="fa fa-chevron-down"></i>
+          <ul class="sec-ul">
+            <a href="../partners/index.html"
+              ><li style="margin-bottom: 10px">Our Parteners</li></a
+            >
+            <a href="../contact/index.html"
+              ><li class="active">Contact Us</li></a
+            >
+          </ul>
+        </li>
+        <a href="../partners/index.html" class="media-li"
+          ><li>Our Parteners</li></a
+        >
+        <a href="../contact/index.html" class="media-li"
+          ><li class="media-li-curr">Contact Us</li></a
+        >
+      </ul>
     </nav>
     <div class="fixed-fix" id="up"></div>
     <div class="main-contain">
-        <h1>Contact Us</h1>
-        <section class="contain">
-            <div class ="form-image">
-                <img src="images/pic.png" alt="contact us">
-            </div>
-                <form>
-                    <div class="data">
-                        <p>First Name:</p>
-                        <input type="text" onblur="chngeBorderColor2(this)" onfocus="chngeBorderColor(this)" name="first-name" placeholder="your first name" autofocus autocomplete="off">
-                    </div>
-                    <div class="data">
-                        <p>Last Name:</p>
-                        <input type="text" onblur="chngeBorderColor2(this)" onfocus="chngeBorderColor(this)" name="last-name" placeholder="your last name" autocomplete="off">
-                    </div>
-                    <div class="data">
-                        <p>Mobile:</p>
-                        <input type="text" onblur="chngeBorderColor2(this)" onfocus="chngeBorderColor(this)" name="Mobile" placeholder="01x-xxxxxxxx" autocomplete="off">
-                    </div>
-                    <div class="data">
-                        <p>Email:</p>
-                        <input type="email" onblur="chngeBorderColor2(this)" onfocus="chngeBorderColor(this)" name="email" placeholder="example@mail.com" autocomplete="off">
-                    </div>
-                    <div class="data message">
-                        <p>Your Message:</p>
-                        <textarea onblur="chngeBorderColor2(this)" onfocus="chngeBorderColor(this)" placeholder="Add Your Message Here"></textarea>
-                    </div>
-                    <button type="submit" class="bb">Send</button>
-                </form>
-        </section>
+      <h1>Contact Us</h1>
+      <section class="contain">
+        <div class="form-image">
+          <img src="images/pic.png" alt="contact us" />
+        </div>
+        <form>
+          <div class="data">
+            <p>First Name:</p>
+            <input
+              type="text"
+              onblur="chngeBorderColor2(this)"
+              onfocus="chngeBorderColor(this)"
+              name="first-name"
+              placeholder="your first name"
+              autofocus
+              autocomplete="off"
+            />
+          </div>
+          <div class="data">
+            <p>Last Name:</p>
+            <input
+              type="text"
+              onblur="chngeBorderColor2(this)"
+              onfocus="chngeBorderColor(this)"
+              name="last-name"
+              placeholder="your last name"
+              autocomplete="off"
+            />
+          </div>
+          <div class="data">
+            <p>Mobile:</p>
+            <input
+              type="text"
+              onblur="chngeBorderColor2(this)"
+              onfocus="chngeBorderColor(this)"
+              name="Mobile"
+              placeholder="01x-xxxxxxxx"
+              autocomplete="off"
+            />
+          </div>
+          <div class="data">
+            <p>Email:</p>
+            <input
+              type="email"
+              onblur="chngeBorderColor2(this)"
+              onfocus="chngeBorderColor(this)"
+              name="email"
+              placeholder="example@mail.com"
+              autocomplete="off"
+            />
+          </div>
+          <div class="data message">
+            <p>Your Message:</p>
+            <textarea
+              onblur="chngeBorderColor2(this)"
+              onfocus="chngeBorderColor(this)"
+              placeholder="Add Your Message Here"
+            ></textarea>
+          </div>
+          <button type="submit" class="bb">Send</button>
+        </form>
+      </section>
     </div>
-	<div style="clear: both"></div>
-	<div>
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.81230538794!2d31.25078072003227!3d30.099561381951094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584011af8feb2f%3A0xd839444d08bb1fa5!2z2YPZhNmK2Kkg2KfZhNmH2YbYr9iz2Kkg2KjYtNio2LHYpyDYrNin2YXYudipINio2YbZh9inIC0g2YXYqNmG2Ykg2KfZhNiu2YTZgdin2YjZig!5e0!3m2!1sar!2seg!4v1554921222962!5m2!1sar!2seg" class = "map" ></iframe>
-	</div>
-	<div class="update">
-	    <div class="update-contain">
-           <i class="fa fa-envelope"></i>
-            <h2>Stay updated!</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem consequatur mollitia  </p>
-            <form action="">
-                <input type="email" name="updated" placeholder="Enter your email">
-                <button type="submit" id="click">Subscribe</button>
-            </form>
-		</div>
-	</div>
-	<footer>
-        <div class="social">
-            <i class="fa fa-facebook"></i>
-            <i class="fa fa-twitter"></i>
-            <i class="fa fa-google-plus"></i>
-            <i class="fa fa-instagram"></i>
-        </div>
-        <div class="rights">
-            &copy; 2019 groovy.All Rights Reserved
-        </div>
-        <div>
-            <a href="#up"><i class="fa fa-level-up fa-3x"></i></a>
-        </div>
+    <div style="clear: both"></div>
+    <div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3451.81230538794!2d31.25078072003227!3d30.099561381951094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584011af8feb2f%3A0xd839444d08bb1fa5!2z2YPZhNmK2Kkg2KfZhNmH2YbYr9iz2Kkg2KjYtNio2LHYpyDYrNin2YXYudipINio2YbZh9inIC0g2YXYqNmG2Ykg2KfZhNiu2YTZgdin2YjZig!5e0!3m2!1sar!2seg!4v1554921222962!5m2!1sar!2seg"
+        class="map"
+      ></iframe>
+    </div>
+    <div class="update">
+      <div class="update-contain">
+        <i class="fa fa-envelope"></i>
+        <h2>Stay updated!</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem
+          consequatur mollitia
+        </p>
+        <form action="">
+          <input type="email" name="updated" placeholder="Enter your email" />
+          <button type="submit" id="click">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <footer>
+      <div class="social">
+        <i class="fa fa-facebook"></i>
+        <i class="fa fa-twitter"></i>
+        <i class="fa fa-google-plus"></i>
+        <i class="fa fa-instagram"></i>
+      </div>
+      <div class="rights">&copy; 2019 groovy.All Rights Reserved</div>
+      <div>
+        <a href="#up"><i class="fa fa-level-up fa-3x"></i></a>
+      </div>
     </footer>
     <script src="JS/main.js"></script>
-</body>
+  </body>
 </html>
